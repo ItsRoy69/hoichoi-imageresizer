@@ -21,6 +21,8 @@ const dimensions = [
   { width: 1080, aspectRatio: 9 / 16 },
 ];
 
+app.use(express.static(path.join(__dirname, "/")));
+
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
